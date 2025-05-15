@@ -34,5 +34,29 @@
         "amount": 100.0,
         "category": "utilities",
         "date": "2025-03-10"
+    },
+    {
+        "type": "income",
+        "amount": 2500.0,
+        "category": "salary",
+        "date": "2025-04-01"
+    },
+    {
+        "type": "expense",
+        "amount": 150.0,
+        "category": "entertainment",
+        "date": "2025-04-05"
+    },
+    {
+        "type": "income",
+        "amount": 1000.0,
+        "category": "bonus",
+        "date": "2025-04-10"
+    },
+    {
+        "type": "expense",
+        "amount": 50.0,
+        "category": "transportation",
+        "date": "2025-04-15"
     }
 ]
