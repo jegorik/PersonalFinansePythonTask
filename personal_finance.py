@@ -53,17 +53,24 @@ class FinanceTracker:
             list: A list of Transaction objects loaded from the file.
         """
         if os.path.exists(self.TRANSACTION_FILE):
-            with open(self.TRANSACTION_FILE, 'r') as file:
-                data = json.load(file)
-                # Create Transaction objects from the loaded data
-                return [Transaction(transaction_type=item['type'], amount=item['amount'],
-                                    category=item['category'], date=item['date']) for item in data]
+            try:
+                with open(self.TRANSACTION_FILE, 'r') as file:
+                    data = json.load(file)
+                    # Create Transaction objects from the loaded data
+                    return [Transaction(transaction_type=item['type'], amount=item['amount'],
+                                        category=item['category'], date=item['date']) for item in data]
+            except (json.JSONDecodeError, IOError) as e:
+                print(f"Error loading transactions: {e}")
+                return []
         return []
 
     def save_transactions(self):
         """Saves the current transactions to the JSON file."""
-        with open(self.TRANSACTION_FILE, 'w') as file:
-            json.dump([transaction.to_dict() for transaction in self.transactions], file)
+        try:
+            with open(self.TRANSACTION_FILE, 'w') as file:
+                json.dump([transaction.to_dict() for transaction in self.transactions], file)
+        except IOError as e:
+            print(f"Error saving transactions: {e}")
 
     def add_transaction(self):
         """Prompts the user to add a new transaction."""
