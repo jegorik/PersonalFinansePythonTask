@@ -1,77 +1,113 @@
-# Personal Finance Tracker
+# Personal Finance Python Task
 
-## Overview
+A comprehensive Python application designed for personal finance management and tracking. This project provides essential tools for managing your financial data, creating budgets, tracking expenses, and performing financial analysis.
 
-The Personal Finance Tracker is a simple Python application that helps you manage your personal finances. It allows you to add transactions, view transactions, generate financial summaries, handle missing data gracefully, and save transactions permanently.
+## 🚀 Features
 
-## Purpose
+- **Expense Tracking**: Record and categorize your daily expenses
+- **Budget Management**: Create and monitor budgets across different categories
+- **Financial Analysis**: Generate reports and insights from your financial data
+- **Data Visualization**: Visual charts and graphs for better understanding of spending patterns
+- **Import/Export**: Support for various data formats (CSV, JSON, etc.)
 
-The purpose of this project is to provide a basic tool for tracking personal income and expenses. It helps users keep track of their financial activities and provides a summary of their financial status.
+## 📋 Requirements
 
-## Usage Instructions
+- Python 3.7 or higher
+- Required Python packages (see `requirements.txt`)
 
-### Adding Transactions
+## 🛠️ Installation
 
-To add a transaction, follow these steps:
-
-1. Run the application.
-2. Choose the "Add" action from the main menu.
-3. Enter the transaction type (income or expense).
-4. Enter the amount.
-5. Enter the category (e.g., Food, Rent, Salary, Investments).
-6. Enter the date in YYYY-MM-DD format.
-
-### Viewing Transactions
-
-To view all stored transactions, follow these steps:
-
-1. Run the application.
-2. Choose the "View" action from the main menu.
-3. The application will display all stored transactions.
-
-### Generating Financial Summaries
-
-To generate a financial summary, follow these steps:
-
-1. Run the application.
-2. Choose the "Summary" action from the main menu.
-3. The application will display the total income, total expenses, and balance.
-
-### Handling Missing Data
-
-The application includes error handling for missing data. If required fields are missing or invalid, the application will prompt you to enter the correct information.
-
-### Saving Transactions Permanently
-
-The application saves transactions to a JSON file (`transactions.json`). When you add a new transaction, it is automatically saved to the file. The application also loads existing transactions from the file when it starts.
-
-## Requirements
-
-To run the Personal Finance Tracker, you need the following:
-
-- Python 3.x
-- `json` module (included in the Python standard library)
-- `os` module (included in the Python standard library)
-- `datetime` module (included in the Python standard library)
-
-## Running the Application
-
-To run the application, execute the following command in your terminal:
-
+1. Clone the repository:
 ```bash
-python personal_finance.py
+git clone https://github.com/jegorik/PersonalFinansePythonTask.git
+cd PersonalFinansePythonTask
 ```
 
-## Contributing
+2. Create a virtual environment (recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-If you would like to contribute to this project, please follow these steps:
+3. Install required dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Make your changes and commit them with descriptive messages.
-4. Push your changes to your fork.
-5. Create a pull request to the main repository.
+## 💻 Usage
 
-## License
+1. Run the main application:
+```bash
+python main.py
+```
 
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
+2. Follow the on-screen prompts to:
+   - Add new expenses
+   - Set up budgets
+   - View financial reports
+   - Export data
+
+## 📊 Project Structure
+
+```
+PersonalFinansePythonTask/
+├── main.py                 # Main application entry point
+├── src/                    # Source code directory
+│   ├── finance/            # Core finance modules
+│   ├── utils/              # Utility functions
+│   └── data/               # Data handling modules
+├── tests/                  # Unit tests
+├── data/                   # Sample data files
+├── docs/                   # Documentation
+├── requirements.txt        # Python dependencies
+└── README.md              # This file
+```
+
+## 🧪 Testing
+
+Run the test suite:
+```bash
+python -m pytest tests/
+```
+
+## 📈 Example Usage
+
+```python
+from src.finance import ExpenseTracker, BudgetManager
+
+# Initialize expense tracker
+tracker = ExpenseTracker()
+
+# Add an expense
+tracker.add_expense("Groceries", 45.67, "Food")
+
+# Create a budget
+budget = BudgetManager()
+budget.set_monthly_budget("Food", 300.00)
+
+# Generate report
+report = tracker.generate_monthly_report()
+print(report)
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📞 Contact
+
+- GitHub: [@jegorik](https://github.com/jegorik)
+- Project Link: [https://github.com/jegorik/PersonalFinansePythonTask](https://github.com/jegorik/PersonalFinansePythonTask)
+
+## 🔄 Version History
+
+- **v1.0.0** - Initial release with basic expense tracking functionality
+- More versions to come as the project evolves
