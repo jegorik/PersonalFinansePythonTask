@@ -18,18 +18,21 @@ A comprehensive Python application designed for personal finance management and 
 ## 🛠️ Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/jegorik/PersonalFinansePythonTask.git
 cd PersonalFinansePythonTask
 ```
 
 2. Create a virtual environment (recommended):
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 3. Install required dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -37,11 +40,13 @@ pip install -r requirements.txt
 ## 💻 Usage
 
 1. Run the main application:
+
 ```bash
 python main.py
 ```
 
 2. Follow the on-screen prompts to:
+
    - Add new expenses
    - Set up budgets
    - View financial reports
@@ -49,7 +54,7 @@ python main.py
 
 ## 📊 Project Structure
 
-```
+```text
 PersonalFinansePythonTask/
 ├── main.py                 # Main application entry point
 ├── src/                    # Source code directory
@@ -66,6 +71,7 @@ PersonalFinansePythonTask/
 ## 🧪 Testing
 
 Run the test suite:
+
 ```bash
 python -m pytest tests/
 ```
